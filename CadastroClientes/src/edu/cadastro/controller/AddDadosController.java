@@ -50,5 +50,15 @@ public class AddDadosController {
         }
         
     }
+    public void limparCampos(){
+        
+        view.getTxtNome().setText("");
+        view.getTxtIdade().setText("");
+        view.getTxtEndereco().setText("");
+        view.getTxtCidade().setText("");
+        view.getTxtBairro().setText("");
+        view.getTxtComplemento().setText("");
+        
+    }
     
 }
