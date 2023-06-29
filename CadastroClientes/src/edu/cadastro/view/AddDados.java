@@ -33,6 +33,7 @@ public class AddDados extends javax.swing.JFrame {
         btnSalvar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setText("Nome");
 
@@ -126,6 +127,7 @@ public class AddDados extends javax.swing.JFrame {
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         try {
             controller.salvaCliente();
+            limparCampos();
         } catch (SQLException ex) {
             Logger.getLogger(AddDados.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -164,6 +166,17 @@ public class AddDados extends javax.swing.JFrame {
                 new AddDados().setVisible(true);
             }
         });
+    }
+    
+    private void limparCampos(){
+        
+        txtNome.setText("");
+        txtIdade.setText("");
+        txtEndereco.setText("");
+        txtCidade.setText("");
+        txtBairro.setText("");
+        txtComplemento.setText("");
+        
     }
 
     public JTextField getTxtBairro() {

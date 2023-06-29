@@ -1,7 +1,6 @@
 package edu.cadastro.view;
 
 import edu.cadastro.controller.AtualizarController;
-import edu.cadastro.controller.DetalhesController;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -9,8 +8,8 @@ import javax.swing.JTextField;
 
 public class Atualizar extends javax.swing.JFrame {
 
-    private AtualizarController controller;
-    private String[] dadosCliente;
+    private final AtualizarController controller;
+    private final String[] dadosCliente;
     
     public Atualizar() throws SQLException {
         initComponents();
@@ -45,6 +44,7 @@ public class Atualizar extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setText("Nome");
 

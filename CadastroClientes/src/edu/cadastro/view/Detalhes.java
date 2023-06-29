@@ -8,8 +8,8 @@ import javax.swing.JLabel;
 
 public class Detalhes extends javax.swing.JFrame {
     
-    private DetalhesController controller;
-    private String[] dadosCliente;
+    private final DetalhesController controller;
+    private final String[] dadosCliente;
     
     public Detalhes() throws SQLException {
         initComponents();
@@ -37,6 +37,7 @@ public class Detalhes extends javax.swing.JFrame {
         lblIdade = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setText("Nome:");
 
